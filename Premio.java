@@ -4,7 +4,7 @@ public class Premio {
     private String nombre;
     private int coste, stock;
     
-    Premio(String nombre, int coste, int stock){
+    public Premio(String nombre, int coste, int stock){
         this.setNombre(nombre);
         this.setCoste(coste);
         this.setStock(stock);
