@@ -23,14 +23,14 @@ public class Terminal {
     public void convertir(Tarjeta tarjeta, int dinero) {
         if (dinero >= 0) {
             tarjeta.setTickets(tarjeta.getTickets() + (dinero * 2));
-            System.out.println(toString());
+            System.out.println(tarjeta.toString());
         } else {
             System.out.println("Error");
         }
     }
 
     public void consultar(Tarjeta tarjeta) {
-        System.out.println(toString() + tarjeta.getNumTarjeta());
+        System.out.println(tarjeta.toString());
     }
 
     public void transferir(Tarjeta tarjeta1, Tarjeta tarjeta2) {
