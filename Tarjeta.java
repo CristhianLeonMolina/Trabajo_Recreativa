@@ -14,12 +14,13 @@ public class Tarjeta
     private int creditos;
     private int tickets;
     private int numTarjeta;
+    private int i = 0;
     
-    public Tarjeta(int creditos, int tickets, int numTarjeta)
+    public Tarjeta(int creditos, int tickets)
     {
         this.setCreditos(creditos);
-        this.setTickets(tickets);
-        this.setNumTarjeta(numTarjeta);
+        this.setTickets(0);
+        this.setNumTarjeta(i++);
     }
     
     public int getCreditos()
@@ -37,14 +38,20 @@ public class Tarjeta
         return (this.numTarjeta);
     }
     
-    public void setCreditos(int tarjeta)
+    public void setCreditos(int creditos)
     {
-        this.creditos = tarjeta;
+        if (creditos >= 0)
+            this.creditos = creditos;
+        else
+            System.out.println("Parámetro no válido: creditos");
     }
     
     public void setTickets(int tickets)
     {
-        this.tickets = tickets;
+        if (tickets >= 0)
+            this.tickets = tickets;
+        else
+            System.out.println("Parámetro no válido: tickets");
     }
     
     public void setNumTarjeta(int numTarjeta)
