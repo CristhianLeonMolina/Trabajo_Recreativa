@@ -64,6 +64,6 @@ public class Tarjeta
     @Override
     public String toString()
     {
-        return ("La tarjeta " + this.numTarjeta + " cuenta con " + this.creditos + " y tiene " + this.tickets + " tickets.");
+        return ("La tarjeta " + this.numTarjeta + " cuenta con " + this.creditos + " creditos y tiene " + this.tickets + " tickets.");
     }
 }
