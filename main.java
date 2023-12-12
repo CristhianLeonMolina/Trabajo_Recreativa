@@ -26,8 +26,11 @@ public class main {
         Premio premio6 = new Premio("Juego de Mesa", 100, 30);
         Terminal terminal1 = new Terminal(premio1, premio2, premio3);
         Terminal terminal2 = new Terminal(premio4, premio5, premio6);
-        Juego juego1 = new Juego(Tetris, 20);
-        Juego juego2 = new Juego(Baloncesto, 15);
+        Juego juego1 = new Juego("Tetris", 20);
+        Juego juego2 = new Juego("Baloncesto", 15);
+        
+        terminal1.toString();
+        terminal2.toString();
         
         terminal1.convertir(tarjeta1, 50);
         terminal2.convertir(tarjeta2, 20);
@@ -35,14 +38,19 @@ public class main {
         juego1.pagar(tarjeta1);
         juego2.pagar(tarjeta2);
         
+        terminal1.consultar(tarjeta1);
+        terminal2.consultar(tarjeta2);
+        
         terminal1.transferir(tarjeta1, tarjeta2);
         terminal2.transferir(tarjeta1, tarjeta2);
+        
+
         
         terminal1.canjear(tarjeta2, premio1);
         terminal2.canjear(tarjeta2, premio5);
         
         juego1.pagar(tarjeta1);
-        juego2.pagar(tarjeta2);        
+        juego2.pagar(tarjeta2);
     }
     
 }
