@@ -14,7 +14,7 @@ public class Tarjeta
     private int creditos;
     private int tickets;
     private int numTarjeta;
-    private int i = 0;
+    static int i = 0;
     
     //constructor de la clase
     public Tarjeta(int creditos)
