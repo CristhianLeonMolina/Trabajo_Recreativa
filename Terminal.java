@@ -56,7 +56,7 @@ public class Terminal {
                 if (valorTransferencia < 0) {
                     System.out.println("Error");
                     contadorEleccion++;
-                } else if (valorTransferencia < tarjeta1.getTickets()) {
+                } else if (valorTransferencia <= tarjeta1.getTickets()) {
                     tarjeta1.setTickets(tarjeta1.getTickets() - valorTransferencia);
                     tarjeta2.setTickets(tarjeta2.getTickets() + valorTransferencia);
                 } else {
@@ -66,13 +66,12 @@ public class Terminal {
             }
         } else {
             for (int i = 0; i < contadorEleccion; i++) {
-                System.out.println("");
                 System.out.print("Introduce un valor a transferir de créditos: ");
                 valorTransferencia = sc.nextInt();
                 if (valorTransferencia < 0) {
                     System.out.println("Error");
                     contadorEleccion++;
-                } else if (valorTransferencia < tarjeta1.getCreditos()) {
+                } else if (valorTransferencia <= tarjeta1.getCreditos()) {
                     tarjeta1.setCreditos(tarjeta1.getCreditos() - valorTransferencia);
                     tarjeta2.setCreditos(tarjeta2.getCreditos() + valorTransferencia);
                 } else {
@@ -113,9 +112,9 @@ public class Terminal {
     @Override
     public String toString() {
         return ("En este terminal disponemos de los siguientes premios:" + "\n"
-                + this.NombrePremios[0] + " , nos quedan " + this.NombrePremios[0].getStock() + " y su coste es de " + this.NombrePremios[0].getCoste() + " tickets" + "\n"
-                + this.NombrePremios[1] + " , nos quedan " + this.NombrePremios[1].getStock() + " y su coste es de " + this.NombrePremios[1].getCoste() + " tickets" + "\n"
-                + this.NombrePremios[2] + " , nos quedan " + this.NombrePremios[2].getStock() + " y su coste es de " + this.NombrePremios[2].getCoste() + " tickets");
+                + this.NombrePremios[0].getNombre() + " , nos quedan " + this.NombrePremios[0].getStock() + " y su coste es de " + this.NombrePremios[0].getCoste() + " tickets" + "\n"
+                + this.NombrePremios[1].getNombre() + " , nos quedan " + this.NombrePremios[1].getStock() + " y su coste es de " + this.NombrePremios[1].getCoste() + " tickets" + "\n"
+                + this.NombrePremios[2].getNombre() + " , nos quedan " + this.NombrePremios[2].getStock() + " y su coste es de " + this.NombrePremios[2].getCoste() + " tickets");
     }
     //cambiar bucles for por while
 }
