@@ -49,6 +49,7 @@ public class Juego
     }
     
     //metodo para pagar el juego al que se quiere jugar, restando los créditos y sumando los nuevos tickets que han sido generados aleatoriamente
+    //se puede hacer que al darte los tickets también te indique la cantidad que te ha dado
     public void pagar(Tarjeta tarjetaPago)
     {
         if ((tarjetaPago.getCreditos() - this.coste) >= 0)
