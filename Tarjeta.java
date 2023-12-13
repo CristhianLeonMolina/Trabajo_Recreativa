@@ -55,6 +55,7 @@ public class Tarjeta
     }
     
     //setter para establecer el número de la nueva tarjeta
+    //se puede quitar, ya que como el numero de tarjeta es estatico no necesita cambiarse
     public void setNumTarjeta(int numTarjeta)
     {
         this.numTarjeta = numTarjeta;
