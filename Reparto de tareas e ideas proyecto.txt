@@ -1,0 +1,57 @@
+﻿REPARTO DE TAREAS
+
+
+
+
+A la hora de elegir las tareas nos pusimos de acuerdo en repartirlas equitativamente.
+
+
+Para las clases de Tarjeta y Juego se eligió a Sara ya que tiene más conocimiento en la programación y cuando terminase su parte del trabajo podía ayudar con las demás clases en caso de que sobrara tiempo.
+
+
+Para las clases de Premio y Terminal se eligió a Víctor debido a que se desenvuelve rápido para crear métodos funcionales con pocos errores.
+
+
+Para la clase Principal y la gestión del equipo se eligió a Cristhian ya que puede ver los errores de código de los programas rápidamente.
+
+
+________________
+
+
+IDEAS DE TRABAJO
+
+
+
+
+Premio:
+                          
+La clase Premio tiene como atributos el nombre, su coste y el stock que disponemos del mismo. Para poder establecer estos atributos, crearemos sus correspondientes métodos setter, en el caso de querer recibir los atributos del premio en otras clases, y utilizarlos en la propia clase Premio, crearemos los métodos getter para completar el proceso de encapsulación.
+
+
+Finalmente, hemos incluido un método toString() usando la anotación @Override, este método nos permitirá pasar a String los atributos del premio y sacarlos por pantalla.
+
+
+
+
+
+
+Terminal:
+
+
+La clase Terminal tiene como único atributo un array de objetos de la clase Premio, con este array, conseguiremos el nombre del objeto de esa clase para cada posición del array. Para poder establecer este atributo, crearemos su correspondiente método setter. Para recibirlo en otras clases, o en la propia clase Terminal, crearemos el método getter para finalizar el proceso de encapsulación. 
+
+
+Para poder convertir dinero en tickets, crearemos un método “convertir” que recibe un objeto de la clase Tarjeta y un entero que hace referencia al dinero que queremos convertir en tickets, este método no devuelve nada. 
+
+
+A la hora de querer consultar los datos de la Tarjeta que hemos pasado por el terminal, se utilizará un método “consultar” que sacará por pantalla el método toString() creado en la clase Tarjeta. 
+
+
+Para permitir al usuario canjear premios, creamos la clase “canjear” que recibirá un objeto de la clase Tarjeta y un objeto de la clase Premio, este método tiene el objetivo de sacar por pantalla un mensaje tanto si el usuario se puede permitir el premio como si no puede. 
+
+
+La terminal permite transferencias entre tarjetas, para ello, hemos creado un método “transferir” que recibe dos objetos de la clase Tarjeta y saca por pantalla un menú explicativo, este menú decidimos hacerlo con un bucle for, pero tras intentar implementarlo y probarlo, nos dimos cuenta que es más eficiente con un bucle do-while, por lo cúal, lo adaptamos al bucle do-while y añadimos la declaración try-catch para poder capturar los errores de compilación, en este caso, por si el usuario introduce por teclado un carácter no válido.
+
+
+Finalmente, hemos incluido un método toString() usando la anotación @Override, este método nos permitirá pasar a String los atributos del terminal y sacarlos por pantalla.
+http://jc-mouse.blogspot.com/2012/07/creacion-y-uso-de-javadoc-con-netbeans.html
