@@ -5,32 +5,41 @@ public class Juego
     private int     coste;
     private int     premio;
     
-    /**constructor para la clase*/
+    /**constructor para la clase
+    *@params nombre: nombre del juego
+    * coste: coste del juego
+    */
     public Juego(String nombre, int coste)
     {
         this.setNombre(nombre);
         this.setCoste(coste);
     }
     
-    /**getter para obtener el nombre del juego al que nos referimos*/
+    /**getter para obtener el nombre del juego al que nos referimos
+    */
     public String getNombre()
     {
         return (this.nombre);
     }
     
-    /**getter para obtener el precio del juego al que nos referimos*/
+    /**getter para obtener el precio del juego al que nos referimos
+    */
     public int getCoste()
     {
         return (this.coste);
     }
     
-    /**setter para nombrar o modificar el nombre del juego*/
+    /**setter para nombrar o modificar el nombre del juego
+    *@params nombre: nombre del juego
+    */
     private void setNombre(String nombre)
     {
         this.nombre = nombre;
     }
     
-    /**setter para dar valor o modificar el valor del precio del juego*/
+    /**setter para dar valor o modificar el valor del precio del juego
+    *@params coste: coste del juego
+    */
     private void setCoste(int coste)
     {
         if (coste >= 0)
@@ -39,7 +48,9 @@ public class Juego
             System.out.println("Parámetro no válido: coste");
     }
     
-    /**metodo para pagar el juego al que se quiere jugar, restando los créditos y sumando los nuevos tickets que han sido generados aleatoriamente.*/
+    /**metodo para pagar el juego al que se quiere jugar, restando los créditos y sumando los nuevos tickets que han sido generados aleatoriamente.
+    *@params tarjetaPago: de la clase Tarjeta, es la tarjeta que se ha utilizado para el pago
+    */
     public void pagar(Tarjeta tarjetaPago)
     {
         if ((tarjetaPago.getCreditos() - this.coste) >= 0)
