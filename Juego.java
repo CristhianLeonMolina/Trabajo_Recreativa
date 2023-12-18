@@ -38,14 +38,14 @@ public class Juego
             System.out.println("Parámetro no válido: coste");
     }
     
-    /**metodo para pagar el juego al que se quiere jugar, restando los créditos y sumando los nuevos tickets que han sido generados aleatoriamente. 
-    Se puede hacer que al darte los tickets también te indique la cantidad que te ha dado*/
+    /**metodo para pagar el juego al que se quiere jugar, restando los créditos y sumando los nuevos tickets que han sido generados aleatoriamente.*/
     public void pagar(Tarjeta tarjetaPago)
     {
         if ((tarjetaPago.getCreditos() - this.coste) >= 0)
         {
             tarjetaPago.setCreditos(tarjetaPago.getCreditos() - this.coste);
             tarjetaPago.setTickets(tarjetaPago.getTickets() + (int)(Math.random()*51));
+            System.out.println("¡Has recibido " + this.tickets + " tickets! Ahora cuentas con " + this.creditos + " créditos");
         }
         else
             System.out.println("Saldo insuficiente");
