@@ -1,27 +1,41 @@
 package JuegosRecreativos;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Terminal {
 
     private Premio NombrePremios[] = new Premio[3];
-
-    public Terminal(Premio premio1, Premio premio2, Premio premio3) { //Constructor de la clase "Terminal" que permite almacenar en al array 3 objetos de la clase "Premio".
+    /**
+     * Constructor de la clase "Terminal" que permite almacenar en al array 3 objetos de la clase "Premio".
+     * @param premio1 Premio
+     * @param premio2 Premio
+     * @param premio3 Premio
+     */
+    public Terminal(Premio premio1, Premio premio2, Premio premio3) { 
         this.setNombrePremios(0, premio1);
         this.setNombrePremios(1, premio2);
         this.setNombrePremios(2, premio3);
     }
-
-    public void setNombrePremios(int posicionPremio, Premio premio) { //Método setter que selecciona un premio y lo guarda en una posición exacta del array "NombrePremios".
+    /**
+     * Método setter que selecciona un premio y lo guarda en una posición exacta del array "NombrePremios".
+     * @param posicionPremio Número Entero
+     * @param premio Premio
+     */
+    public void setNombrePremios(int posicionPremio, Premio premio) { 
         this.NombrePremios[posicionPremio] = premio;
     }
-
-    public Premio[] getNombrePremios() { //Método getter que devuelve el array "NombrePremios".
+    /**
+     * Método getter que devuelve el array "NombrePremios".
+     */
+    public Premio[] getNombrePremios() { 
         return this.NombrePremios;
     }
-
-    public void convertir(Tarjeta tarjeta, int dinero) { //Método para convertir dinero en tickets.
+    /**
+     * Método que permite convertir dinero en tickets.
+     * @param tarjeta Tarjeta
+     * @param dinero Número Entero
+     */
+    public void convertir(Tarjeta tarjeta, int dinero) {
         if (dinero >= 0) {
             tarjeta.setTickets(tarjeta.getTickets() + (dinero * 2));
             System.out.println(tarjeta.toString());
@@ -29,25 +43,32 @@ public class Terminal {
             System.out.println("Has introducido un valor negativo");
         }
     }
-
-    public void consultar(Tarjeta tarjeta) { //Método que consulta los datos de la tarjeta.
+    /**
+     * Método que consulta los datos de la tarjeta.
+     * @param tarjeta Tarjeta
+     */
+    public void consultar(Tarjeta tarjeta) { 
         System.out.println(tarjeta.toString());
     }
-
-    public void transferir(Tarjeta tarjeta1, Tarjeta tarjeta2) { //Método que permite transferir créditos o tickets de una tarjeta a otra.
+    /**
+     * Método que permite transferir créditos o tickets de una tarjeta a otra.
+     * @param tarjeta1 Tarjeta
+     * @param tarjeta2 Tarjeta
+     */
+    public void transferir(Tarjeta tarjeta1, Tarjeta tarjeta2) { 
         Scanner sc = new Scanner(System.in);
         int valorTransferencia = 0;
         int eleccion = 0;
-        try {
         do {
-            System.out.println("Introduce un número acorde al tipo de transferencia" + "\n"
-                    + "0. Tickets" + "\n"
-                    + "1. Créditos" + "\n");
-            eleccion = sc.nextInt();
+            try {
+                System.out.println("Introduce un número acorde al tipo de transferencia" + "\n"
+                        + "0. Tickets" + "\n"
+                        + "1. Créditos");
+                eleccion = Integer.parseInt(sc.nextLine());
+            } catch (NumberFormatException ex) {
+                System.out.println("Carácter no permitido");
+            }
         } while (eleccion != 0 && eleccion != 1);
-        } catch (InputMismatchException ex) {
-            System.out.println("Carácter no permitido");
-        }
         int contadorEleccion = 1;
         if (eleccion == 0) {
             for (int i = 0; i < contadorEleccion; i++) {
@@ -82,8 +103,13 @@ public class Terminal {
         }
         System.out.println(toString());
     }
-
-    public void canjear(Tarjeta tarjeta, Premio premio) { //Método que permite canjear tickets por premios.
+    /**
+     * Método que permite canjear tickets por premios.
+     * 
+     * @param tarjeta Tarjeta
+     * @param premio Premio
+     */
+    public void canjear(Tarjeta tarjeta, Premio premio) {
         int tenerPremio = 0;
         for (int i = 0; i < NombrePremios.length; i++) {
             if (premio == NombrePremios[i]) {
@@ -110,7 +136,10 @@ public class Terminal {
     }
 
     @Override
-    public String toString() { //Paso a String de los atributos de cada premio del array que contiene los premios disponibles.
+    /**
+     * Paso a String de los atributos de cada premio del array que contiene los premios disponibles.
+     */
+    public String toString() { 
         return ("En este terminal disponemos de los siguientes premios:" + "\n"
                 + this.NombrePremios[0].getNombre() + ", nos quedan " + this.NombrePremios[0].getStock() + " y su coste es de " + this.NombrePremios[0].getCoste() + " tickets" + "\n"
                 + this.NombrePremios[1].getNombre() + ", nos quedan " + this.NombrePremios[1].getStock() + " y su coste es de " + this.NombrePremios[1].getCoste() + " tickets" + "\n"

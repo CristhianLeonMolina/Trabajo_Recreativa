@@ -4,30 +4,55 @@ public class Premio {
 
     private String nombre;
     private int coste, stock;
-
+    /**
+     * Constructor de la clase "Premio".
+     * @param nombre Cadena de carácteres
+     * @param coste Número Entero
+     * @param stock Número Entero
+     */
     public Premio(String nombre, int coste, int stock) { //Constructor de la clase "Premio" con los atributos nombre, coste y stock.
         this.setNombre(nombre);
         this.setCoste(coste);
         this.setStock(stock);
     }
-
-    public String getNombre() { //Método getter del atributo nombre.
+    
+    /**
+     * Método que permite recibir el atributo "nombre".
+     * @return String El valor del parámetro "nombre"
+     */
+    public String getNombre() {
         return this.nombre;
     }
-
-    public int getCoste() { //Método getter del atributo coste.
+    
+    /**
+     * Método que permite recibir el atributo "coste".
+     * @return int El valor del parámetro "coste"
+     */
+    public int getCoste() {
         return this.coste;
     }
 
-    public int getStock() { //Método getter del atributo stock.
+    /**
+     * Método que permite recibir el atributo "stock".
+     * @return int El valor del parámetro "stock"
+     */
+    public int getStock() {
         return this.stock;
     }
 
-    public void setNombre(String nombre) { //Método setter del atributo nombre.
+    /**
+     * Método que permite establecer el atributo "nombre".
+     * @param nombre Cadena de carácteres
+     */
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public void setCoste(int coste) { //Método setter del atributo coste.
+    
+    /**
+     * Método que permite establecer el atributo "coste".
+     * @param coste Número Entero
+     */
+    public void setCoste(int coste) {
         if (coste < 0) {
             System.out.println("En este establecimiento no disponemos de productos gratuitos");
         } else {
@@ -35,7 +60,11 @@ public class Premio {
         }
     }
 
-    public void setStock(int stock) { //Método setter del atributo stock.
+    /**
+     * Método que permite establecer el atributo "stock".
+     * @param stock Número Entero
+     */
+    public void setStock(int stock) {
         if (stock < 0) {
             System.out.println("No podemos tener un stock menor que 0 unidades");
         } else {
@@ -44,7 +73,10 @@ public class Premio {
     }
     
     @Override
-    public String toString() { //Paso a String de los atributos del premio.
+    /**
+     * Paso a String de los atributos de cada premio.
+     */
+    public String toString() {
     return ("Nos quedan " + this.getStock() + " " + this.getNombre().toLowerCase() + " con un coste de " + this.getCoste() + " tickets.");
     }
 }
