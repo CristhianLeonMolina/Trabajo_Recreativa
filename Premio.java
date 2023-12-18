@@ -54,7 +54,7 @@ public class Premio {
      */
     public void setCoste(int coste) {
         if (coste < 0) {
-            System.out.println("En este establecimiento no disponemos de productos gratuitos");
+            System.out.println("En este establecimiento no disponemos de productos gratuitos.\n");
         } else {
             this.coste = coste;
         }
@@ -66,7 +66,7 @@ public class Premio {
      */
     public void setStock(int stock) {
         if (stock < 0) {
-            System.out.println("No podemos tener un stock menor que 0 unidades");
+            System.out.println("No podemos tener un stock menor que 0 unidades.\n");
         } else {
             this.stock = stock;
         }
@@ -78,6 +78,6 @@ public class Premio {
      * @return String: datos del premio
      */
     public String toString() {
-    return ("Nos quedan " + this.getStock() + " " + this.getNombre().toLowerCase() + " con un coste de " + this.getCoste() + " tickets.");
+    return ("Nos quedan " + this.getStock() + " " + this.getNombre().toLowerCase() + " con un coste de " + this.getCoste() + " tickets.\n");
     }
 }
