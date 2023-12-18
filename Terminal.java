@@ -33,12 +33,12 @@ public class Terminal {
     }
     /**
      * Método que permite convertir dinero en tickets.
-     * @param tarjeta: objeto de la clase Tarjeta a la que se le introduce los tickets
+     * @param tarjeta: objeto de la clase Tarjeta a la que se le introduce los créditos
      * @param dinero: cantidad de dinero a convertir
      */
     public void convertir(Tarjeta tarjeta, int dinero) {
         if (dinero >= 0) {
-            tarjeta.setCreditos(tarjeta.getCreditos() + (dinero * 2));
+            tarjeta.setCrediros(tarjeta.getCreditos() + (dinero * 2));
             System.out.println(tarjeta.toString());
         } else {
             System.out.println("Has introducido un valor negativo");
@@ -68,7 +68,7 @@ public class Terminal {
                         + "1. Créditos");
                 eleccion = Integer.parseInt(sc.nextLine());
             } catch (NumberFormatException ex) {
-                System.out.println("Carácter no permitido");
+                System.out.println("Carácter no permitido.\n");
             }
         } while (eleccion != 0 && eleccion != 1);
         int contadorEleccion = 1;
@@ -77,13 +77,13 @@ public class Terminal {
                 System.out.print("Introduce los tickets a transferir: ");
                 valorTransferencia = sc.nextInt();
                 if (valorTransferencia < 0) {
-                    System.out.println("Has introducido un valor negativo, inténtalo de nuevo.");
+                    System.out.println("Has introducido un valor negativo, inténtalo de nuevo.\n");
                     contadorEleccion++;
                 } else if (valorTransferencia <= tarjeta1.getTickets()) {
                     tarjeta1.setTickets(tarjeta1.getTickets() - valorTransferencia);
                     tarjeta2.setTickets(tarjeta2.getTickets() + valorTransferencia);
                 } else {
-                    System.out.println("Has intentado transferir más tickets de los que tienes, inténtalo de nuevo.");
+                    System.out.println("Has intentado transferir más tickets de los que tienes, inténtalo de nuevo.\n");
                     contadorEleccion++;
                 }
             }
@@ -92,13 +92,13 @@ public class Terminal {
                 System.out.print("Introduce los créditos a transferir: ");
                 valorTransferencia = sc.nextInt();
                 if (valorTransferencia < 0) {
-                    System.out.println("Has introducido un valor negativo, inténtalo de nuevo.");
+                    System.out.println("Has introducido un valor negativo, inténtalo de nuevo.\n");
                     contadorEleccion++;
                 } else if (valorTransferencia <= tarjeta1.getCreditos()) {
                     tarjeta1.setCreditos(tarjeta1.getCreditos() - valorTransferencia);
                     tarjeta2.setCreditos(tarjeta2.getCreditos() + valorTransferencia);
                 } else {
-                    System.out.println("Has intentado transferir más créditos de los que tienes, inténtalo de nuevo.");
+                    System.out.println("Has intentado transferir más créditos de los que tienes, inténtalo de nuevo.\n");
                     contadorEleccion++;
                 }
             }
@@ -120,20 +120,20 @@ public class Terminal {
                 if (premio.getStock() > 0) {
                     tenerPremio++;
                     if (premio.getCoste() > tarjeta.getTickets()) {
-                        System.out.println("No te puedes permitir este premio, consigue más tickets 😀");
+                        System.out.println("No te puedes permitir este premio, consigue más tickets 😀\n");
                     } else {
                         tenerPremio++;
                     }
                 }
             } else {
-                System.out.println("No disponemos del premio solicitado en este terminal");
+                System.out.println("No disponemos del premio solicitado en este terminal.\n");
             }
 
         }
         if (tenerPremio == 3) {
             premio.setStock(premio.getStock() - 1);
-            System.out.println("Ya puedes recoger el premio: " + premio.getNombre());
-            System.out.println("Nos quedan " + premio.getStock() + " unidades de este premio en el terminal actual");
+            System.out.println("Ya puedes recoger el premio: " + premio.getNombre() + ".");
+            System.out.println("Nos quedan " + premio.getStock() + " unidades de este premio en el terminal actual.\n");
         }
     }
 
