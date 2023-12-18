@@ -10,7 +10,7 @@ public class Premio {
      * @param coste Número Entero
      * @param stock Número Entero
      */
-    public Premio(String nombre, int coste, int stock) { //Constructor de la clase "Premio" con los atributos nombre, coste y stock.
+    public Premio(String nombre, int coste, int stock) {
         this.setNombre(nombre);
         this.setCoste(coste);
         this.setStock(stock);
@@ -75,6 +75,7 @@ public class Premio {
     @Override
     /**
      * Paso a String de los atributos de cada premio.
+     * return String Cadena de carácteres
      */
     public String toString() {
     return ("Nos quedan " + this.getStock() + " " + this.getNombre().toLowerCase() + " con un coste de " + this.getCoste() + " tickets.");

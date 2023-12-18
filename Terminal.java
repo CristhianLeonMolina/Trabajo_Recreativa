@@ -26,6 +26,7 @@ public class Terminal {
     }
     /**
      * Método getter que devuelve el array "NombrePremios".
+     * @return NombrePremios[] Premio
      */
     public Premio[] getNombrePremios() { 
         return this.NombrePremios;
@@ -54,6 +55,7 @@ public class Terminal {
      * Método que permite transferir créditos o tickets de una tarjeta a otra.
      * @param tarjeta1 Tarjeta
      * @param tarjeta2 Tarjeta
+     * @exception NumberFormatException
      */
     public void transferir(Tarjeta tarjeta1, Tarjeta tarjeta2) { 
         Scanner sc = new Scanner(System.in);
@@ -138,6 +140,7 @@ public class Terminal {
     @Override
     /**
      * Paso a String de los atributos de cada premio del array que contiene los premios disponibles.
+     * return String Cadena de carácteres 
      */
     public String toString() { 
         return ("En este terminal disponemos de los siguientes premios:" + "\n"
