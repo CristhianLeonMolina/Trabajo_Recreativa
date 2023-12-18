@@ -3,6 +3,7 @@ public class Juego
 {
     private String  nombre;
     private int     coste;
+    private int     premio;
     
     /**constructor para la clase*/
     public Juego(String nombre, int coste)
@@ -43,9 +44,10 @@ public class Juego
     {
         if ((tarjetaPago.getCreditos() - this.coste) >= 0)
         {
+            this.premio = (int)(Math.random()*51);
             tarjetaPago.setCreditos(tarjetaPago.getCreditos() - this.coste);
-            tarjetaPago.setTickets(tarjetaPago.getTickets() + (int)(Math.random()*51));
-            System.out.println("¡Has recibido " + this.tickets + " tickets! Ahora cuentas con " + this.creditos + " créditos");
+            tarjetaPago.setTickets(tarjetaPago.getTickets() + premio);
+            System.out.println("¡Has recibido " + this.premio + " tickets! Ahora cuentas con " + this.coste + " créditos");
         }
         else
             System.out.println("Saldo insuficiente");
