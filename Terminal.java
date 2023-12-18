@@ -19,26 +19,26 @@ public class Terminal {
     /**
      * Método setter que selecciona un premio y lo guarda en una posición exacta del array "NombrePremios".
      * @param posicionPremio: posicion dentro del array NombrePremios[]
-     * @param premio: objeto de la clase Premio
+     * @param premio: objeto de la clase Premio que se guarda en el array de los nombres de los premios en esta terminal
      */
     public void setNombrePremios(int posicionPremio, Premio premio) { 
         this.NombrePremios[posicionPremio] = premio;
     }
     /**
      * Método getter que devuelve el array "NombrePremios".
-     * @return NombrePremios[]: array de la clase Premio
+     * @return NombrePremios[]: array de objetos de la clase Premio
      */
     public Premio[] getNombrePremios() { 
         return this.NombrePremios;
     }
     /**
      * Método que permite convertir dinero en tickets.
-     * @param tarjeta: objeto de la clase Tarjeta
+     * @param tarjeta: objeto de la clase Tarjeta a la que se le introduce los tickets
      * @param dinero: cantidad de dinero a convertir
      */
     public void convertir(Tarjeta tarjeta, int dinero) {
         if (dinero >= 0) {
-            tarjeta.setTickets(tarjeta.getTickets() + (dinero * 2));
+            tarjeta.setCreditos(tarjeta.getCreditos() + (dinero * 2));
             System.out.println(tarjeta.toString());
         } else {
             System.out.println("Has introducido un valor negativo");
@@ -46,15 +46,15 @@ public class Terminal {
     }
     /**
      * Método que consulta los datos de la tarjeta.
-     * @param tarjeta: objeto de la clase Tarjeta
+     * @param tarjeta: objeto de la clase Tarjeta con la que se consultan los datos
      */
     public void consultar(Tarjeta tarjeta) { 
         System.out.println(tarjeta.toString());
     }
     /**
      * Método que permite transferir créditos o tickets de una tarjeta a otra.
-     * @param tarjeta1: objeto de la clase Tarjeta
-     * @param tarjeta2: objeto de la clase Tarjeta
+     * @param tarjeta1: objeto de la clase Tarjeta con la que se realiza la transferencia
+     * @param tarjeta2: objeto de la clase Tarjeta que recibe la transferencia
      * @exception NumberFormatException
      */
     public void transferir(Tarjeta tarjeta1, Tarjeta tarjeta2) { 
@@ -108,8 +108,8 @@ public class Terminal {
     /**
      * Método que permite canjear tickets por premios.
      * 
-     * @param tarjeta: objeto de la clase Tarjeta
-     * @param premio: objeto de la clase Premio
+     * @param tarjeta: objeto de la clase Tarjeta con la que se canjean los premios por tickets
+     * @param premio: objeto de la clase Premio que pide el usuario de la tarjeta
      */
     public void canjear(Tarjeta tarjeta, Premio premio) {
         int tenerPremio = 0;
@@ -140,7 +140,7 @@ public class Terminal {
     @Override
     /**
      * Paso a String de los atributos de cada premio del array que contiene los premios disponibles.
-     * return String: datos del terminal
+     * @return String: datos del terminal
      */
     public String toString() { 
         return ("En este terminal disponemos de los siguientes premios:" + "\n"
