@@ -46,7 +46,7 @@ public class Juego
         {
             this.premio = (int)(Math.random()*51);
             tarjetaPago.setCreditos(tarjetaPago.getCreditos() - this.coste);
-            tarjetaPago.setTickets(tarjetaPago.getTickets() + premio);
+            tarjetaPago.setTickets(tarjetaPago.getTickets() + this.premio);
             System.out.println("¡Has recibido " + this.premio + " tickets! Ahora cuentas con " + this.coste + " créditos");
         }
         else
