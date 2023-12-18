@@ -11,7 +11,7 @@ public class Tarjeta
     {
         this.setCreditos(creditos);
         this.setTickets(0);
-        this.setNumTarjeta(i++);
+        this.Tarjeta(i++);
     }
     
     /**getter para obtener la cantidad de creditos en la tarjeta*/
