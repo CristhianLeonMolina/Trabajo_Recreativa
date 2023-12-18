@@ -6,9 +6,9 @@ public class Premio {
     private int coste, stock;
     /**
      * Constructor de la clase "Premio".
-     * @param nombre Cadena de carácteres
-     * @param coste Número Entero
-     * @param stock Número Entero
+     * @param nombre: nombre del premio
+     * @param coste: coste del premio
+     * @param stock: stock del premio
      */
     public Premio(String nombre, int coste, int stock) {
         this.setNombre(nombre);
@@ -18,7 +18,7 @@ public class Premio {
     
     /**
      * Método que permite recibir el atributo "nombre".
-     * @return String El valor del parámetro "nombre"
+     * @return String: El valor del parámetro "nombre"
      */
     public String getNombre() {
         return this.nombre;
@@ -26,7 +26,7 @@ public class Premio {
     
     /**
      * Método que permite recibir el atributo "coste".
-     * @return int El valor del parámetro "coste"
+     * @return int: El valor del parámetro "coste"
      */
     public int getCoste() {
         return this.coste;
@@ -34,7 +34,7 @@ public class Premio {
 
     /**
      * Método que permite recibir el atributo "stock".
-     * @return int El valor del parámetro "stock"
+     * @return int: El valor del parámetro "stock"
      */
     public int getStock() {
         return this.stock;
@@ -42,7 +42,7 @@ public class Premio {
 
     /**
      * Método que permite establecer el atributo "nombre".
-     * @param nombre Cadena de carácteres
+     * @param nombre: nombre del premio
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -50,7 +50,7 @@ public class Premio {
     
     /**
      * Método que permite establecer el atributo "coste".
-     * @param coste Número Entero
+     * @param coste: coste del premio
      */
     public void setCoste(int coste) {
         if (coste < 0) {
@@ -62,7 +62,7 @@ public class Premio {
 
     /**
      * Método que permite establecer el atributo "stock".
-     * @param stock Número Entero
+     * @param stock: stock del premio
      */
     public void setStock(int stock) {
         if (stock < 0) {
@@ -75,7 +75,7 @@ public class Premio {
     @Override
     /**
      * Paso a String de los atributos de cada premio.
-     * return String Cadena de carácteres
+     * return String: datos del premio
      */
     public String toString() {
     return ("Nos quedan " + this.getStock() + " " + this.getNombre().toLowerCase() + " con un coste de " + this.getCoste() + " tickets.");
