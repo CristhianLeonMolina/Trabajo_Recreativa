@@ -54,4 +54,24 @@ La terminal permite transferencias entre tarjetas, para ello, hemos creado un m�
 
 
 Finalmente, hemos incluido un método toString() usando la anotación @Override, este método nos permitirá pasar a String los atributos del terminal y sacarlos por pantalla.
-http://jc-mouse.blogspot.com/2012/07/creacion-y-uso-de-javadoc-con-netbeans.html
+
+
+
+
+Juego:
+
+Contando con los atributos "nombre" y "coste", se desarrollan sus respectivos getter y setter para facilitar la manipulación de la información.
+
+Además, se ha creado el método "pagar" con el objetivo de hacer adecuadamente el trámite en el pago de los juegos recreativos y su respectivo premio, que es generado de manera aleatoria cada vez que el método es llamado.
+
+Por último, un metodo toString() con el objetivo de mostrar en pantalla los atributos de la clase.
+
+
+
+
+
+Tarjeta:
+
+La clase posee tres atributos: "creditos", "tickets" y "numTarjeta" (este ultimo hace referencia al numero de la tarjeta, el cual es único). Esta clase unicamente cuenta con los getter y setter de la tarjeta, ya que su comportamiento no se relaciona en ningun momento con ninguna de las otras clases.
+
+Para finalizar, el respectivo método toString() que mostrará por pantalla los atributos.
