@@ -75,7 +75,7 @@ public class Premio {
     @Override
     /**
      * Paso a String de los atributos de cada premio.
-     * return String: datos del premio
+     * @return String: datos del premio
      */
     public String toString() {
     return ("Nos quedan " + this.getStock() + " " + this.getNombre().toLowerCase() + " con un coste de " + this.getCoste() + " tickets.");
