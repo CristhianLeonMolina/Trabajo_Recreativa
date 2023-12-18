@@ -6,7 +6,9 @@ public class Tarjeta
     private int numTarjeta;
     static int i = 0;
     
-    /**constructor de la clase*/
+    /**constructor de la clase
+    * @param créditos: Cantidad de créditos alamcenados en la tarjeta
+    */
     public Tarjeta(int creditos)
     {
         this.setCreditos(creditos);
@@ -15,7 +17,6 @@ public class Tarjeta
     }
     
     /**getter para obtener la cantidad de creditos en la tarjeta
-    * @param créditos: Cantidad de créditos alamcenados en la tarjeta
     */
     public int getCreditos()
     {
@@ -23,7 +24,6 @@ public class Tarjeta
     }
     
     /**getter para obtener la cantidad de tickets que posee el usuario almacenados en la tarjeta
-    * @param tickets: Cantidad de tickets alamcenados en la tarjeta
     */
     public int getTickets()
     {
@@ -31,7 +31,6 @@ public class Tarjeta
     }
     
     /**getter para obtener el numero de la tarjeta del usuario
-    * @param numTarjeta: Numero de identificación de la tarjeta
     */
     public int getNumTarjeta()
     {
