@@ -103,7 +103,8 @@ public class Terminal {
                 }
             }
         }
-        System.out.println(toString());
+        System.out.println(tarjeta1.toString());
+        System.out.println(tarjeta2.toString());
     }
     /**
      * Método que permite canjear tickets por premios.
