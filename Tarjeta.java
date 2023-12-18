@@ -55,8 +55,8 @@ public class Tarjeta
     
     /**metodo toString que pasa a string el numero de la tarjeta, la cantidad de creditos y la cantidad de ticketsç
     * @param créditos: Cantidad de créditos alamcenados en la tarjeta
-    * tickets: Cantidad de tickets alamcenados en la tarjeta
-    * numTarjeta: Numero de identificación de la tarjeta
+    * @param tickets: Cantidad de tickets alamcenados en la tarjeta
+    * @param numTarjeta: Numero de identificación de la tarjeta
     */
     @Override
     public String toString()
